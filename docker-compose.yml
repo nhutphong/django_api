@@ -1,11 +1,11 @@
 version: '3.9'
 services:
-  web:
-    build: .
-    command: python3 manage.py runserver 0.0.0.0:5000
+  web: #service_name = web
+    build: . # build tu Dockerfile = .
+    command: python3 manage.py runserver 0.0.0.0:8000 #=container=8000
     volumes:
-      - .:/code
+      - .:/code #backup voi host
     ports:
-      - "8000:5000"
+      - "8000:8000"
 
-## browser: localhost:8000
+## browser<localhost=8000>:container=8000
