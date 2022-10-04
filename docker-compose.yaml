@@ -7,6 +7,6 @@ services:
       - .:/code #backup voi host
     ports:
       - "8000:8000"
-    # entrypoint: /code/entrypoint.sh
+    entrypoint: entrypoint.sh
 
 ## browser<localhost=8000>:container=8000
