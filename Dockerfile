@@ -8,6 +8,11 @@ RUN pip3 install -r requirements.txt
 
 
 COPY ./entrypoint.sh .
-RUN chmod u+x entrypoint.sh
+RUN chmod 755 entrypoint.sh
+# phai co WORKDIR = /code/ phia truoc
+ENTRYPOINT ["sh", "/code/entrypoint.sh"]
+
+#port container
+EXPOSE 8000
 
 COPY . .
